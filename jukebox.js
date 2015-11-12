@@ -26,7 +26,8 @@ $(function() {
 
         // Fill the album list with each album in the response
         $.each(response.albums.items, function(index, album) {
-          $('.album-list').append('<img src="' + album.images[0].url +'" data-album-id="' + album.id + '">');
+          var markup = '<img src="' + album.images[0].url +'" data-album-id="' + album.id + '">';
+          $('.album-list').append(markup);
         });
       }
     });
